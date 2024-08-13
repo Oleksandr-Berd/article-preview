@@ -3,13 +3,13 @@ import nextBtnIcon from "../../assets/icons/next.svg"
 
 import * as SC from "../../styles/commonStyled"
 import { log } from "console";
+import { useToggle } from "../../hooks/useToggle";
 
 const Post: React.FC<IPost> = (props) => {
   const { title, author, imgAuthor, imgPost, date, text } = props;
+  const {openShare, closeShare, isShare} = useToggle()
 
-const test = (evt:any) => {
-    console.log(evt)
-}
+  
 
   return (
     <SC.PostCon>
@@ -31,7 +31,7 @@ const test = (evt:any) => {
                 <p>{date}</p>
             </div>
             </div>
-            <SC.Button type="button" onClick={test}>
+            <SC.Button type="button" onClick={openShare}>
                 <img src={nextBtnIcon} alt="next"/>
             </SC.Button>
         </SC.AuthorCon>

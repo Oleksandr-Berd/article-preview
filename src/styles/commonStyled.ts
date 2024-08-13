@@ -6,11 +6,6 @@ max-width: 1280px;
 `
 
 export const PostCon = styled.div`
-height: 100vh;
-
-display: flex;
-flex-direction: column;
-justify-content: space-around;
 
 padding-bottom: 20px;
 `
@@ -18,13 +13,13 @@ padding-bottom: 20px;
 export const ImgPostCon = styled.div`
 height: 200px;
 
+margin-bottom: 36px;
 
 & >img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 
-    margin-bottom: 36px;
 }
 `
 
