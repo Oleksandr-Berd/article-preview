@@ -16,6 +16,10 @@ export const ImgPostCon = styled.div`
 `
 
 export const ContentCon = styled.div`
+
+padding-left: 32px;
+padding-right: 32px;
+
 & h3, & h4 {
     font-family: "ManRopeBold";
     color: ${({theme}) => theme.color.title}
@@ -25,4 +29,12 @@ export const ContentCon = styled.div`
 & p{
 font-family: "ManRopeMed";
 }
+
+& > div:first-child{
+    margin-bottom: 32px;
+}
+`
+
+export const PostTitle = styled.h3`
+margin-bottom: 12px;
 `

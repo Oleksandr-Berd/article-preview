@@ -12,8 +12,10 @@ const Post: React.FC<IPost> = (props) => {
         <img src={imgPost} alt={title} />
       </SC.ImgPostCon>
       <SC.ContentCon>
-        <h3>{title}</h3>
+        <div>
+        <SC.PostTitle>{title}</SC.PostTitle>
         <p>{text}</p>
+        </div>
         <div>
             <div>
                 <img src={imgAuthor} alt={author} />
