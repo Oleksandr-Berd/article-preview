@@ -5,7 +5,20 @@ max-width: 1280px;
 
 `
 
+export const PostCon = styled.div`
+height: 100vh;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+padding-bottom: 20px;
+`
+
 export const ImgPostCon = styled.div`
+height: 200px;
+
+
 & >img{
     width: 100%;
     height: 100%;
@@ -27,7 +40,13 @@ padding-right: 32px;
 }
 
 & p{
+
+color: ${({theme})=> theme.color.text};
+
 font-family: "ManRopeMed";
+font-size: 13px;
+line-height: 1.5;
+letter-spacing: 0.12px;
 }
 
 & > div:first-child{
@@ -37,4 +56,35 @@ font-family: "ManRopeMed";
 
 export const PostTitle = styled.h3`
 margin-bottom: 12px;
+
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.2px;
 `
+
+export const AuthorCon = styled.div`
+display: flex;
+justify-content: space-between;
+
+& > div{
+    display: flex;
+justify-content: space-between;
+}
+`
+
+export const AuthorImg = styled.div`
+display: inline-block;
+margin-right: 16px;
+`
+
+export const AuthorTitle = styled.h4`
+font-size: 13px;
+line-height: 1.5;
+letter-spacing: 0.12px;
+`
+
+export const Button = styled.button`
+border: none;
+background-color: transparent;
+`
+

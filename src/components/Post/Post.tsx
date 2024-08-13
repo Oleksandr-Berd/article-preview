@@ -2,12 +2,17 @@ import { IPost } from "../../utils/interfaces";
 import nextBtnIcon from "../../assets/icons/next.svg"
 
 import * as SC from "../../styles/commonStyled"
+import { log } from "console";
 
 const Post: React.FC<IPost> = (props) => {
   const { title, author, imgAuthor, imgPost, date, text } = props;
 
+const test = (evt:any) => {
+    console.log(evt)
+}
+
   return (
-    <div>
+    <SC.PostCon>
       <SC.ImgPostCon>
         <img src={imgPost} alt={title} />
       </SC.ImgPostCon>
@@ -16,20 +21,22 @@ const Post: React.FC<IPost> = (props) => {
         <SC.PostTitle>{title}</SC.PostTitle>
         <p>{text}</p>
         </div>
-        <div>
+        <SC.AuthorCon>
             <div>
+            <SC.AuthorImg>
                 <img src={imgAuthor} alt={author} />
-            </div>
+            </SC.AuthorImg>
             <div>
-                <h4>{author}</h4>
+                <SC.AuthorTitle>{author}</SC.AuthorTitle>
                 <p>{date}</p>
             </div>
-            <button>
+            </div>
+            <SC.Button type="button" onClick={test}>
                 <img src={nextBtnIcon} alt="next"/>
-            </button>
-        </div>
+            </SC.Button>
+        </SC.AuthorCon>
       </SC.ContentCon>
-    </div>
+    </SC.PostCon>
   );
 };
 
