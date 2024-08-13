@@ -2,14 +2,14 @@ import { IPost } from "../../utils/interfaces";
 import nextBtnIcon from "../../assets/icons/next.svg"
 
 import * as SC from "../../styles/commonStyled"
-import { log } from "console";
 import { useToggle } from "../../hooks/useToggle";
 
 const Post: React.FC<IPost> = (props) => {
   const { title, author, imgAuthor, imgPost, date, text } = props;
   const {openShare, closeShare, isShare} = useToggle()
 
-  
+console.log(closeShare, isShare);
+
 
   return (
     <SC.PostCon>
