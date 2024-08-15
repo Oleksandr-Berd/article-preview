@@ -8,3 +8,10 @@ export interface IPost {
     text: string,
 
 }
+
+export interface IButton {
+    openShare: ()=>void,
+    closeShare: ()=>void,
+    toggleShare:()=> void,
+
+}

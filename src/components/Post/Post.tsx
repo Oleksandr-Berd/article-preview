@@ -1,15 +1,15 @@
-import { IPost } from "../../utils/interfaces";
-import nextBtnIcon from "../../assets/icons/next.svg"
-
 import * as SC from "../../styles/commonStyled"
+
 import { useToggle } from "../../hooks/useToggle";
+import { IPost } from "../../utils/interfaces";
+import AuthorComp from "../Author/Author";
+import ShareComp from "../Share/ShareComp";
+
+
 
 const Post: React.FC<IPost> = (props) => {
   const { title, author, imgAuthor, imgPost, date, text } = props;
   const {openShare, closeShare, isShare} = useToggle()
-
-console.log(closeShare, isShare);
-
 
   return (
     <SC.PostCon>
@@ -21,20 +21,7 @@ console.log(closeShare, isShare);
         <SC.PostTitle>{title}</SC.PostTitle>
         <p>{text}</p>
         </div>
-        <SC.AuthorCon>
-            <div>
-            <SC.AuthorImg>
-                <img src={imgAuthor} alt={author} />
-            </SC.AuthorImg>
-            <div>
-                <SC.AuthorTitle>{author}</SC.AuthorTitle>
-                <p>{date}</p>
-            </div>
-            </div>
-            <SC.Button type="button" onClick={openShare}>
-                <img src={nextBtnIcon} alt="next"/>
-            </SC.Button>
-        </SC.AuthorCon>
+        {isShare ? <ShareComp closeShare={closeShare}/> : <AuthorComp openShare={openShare} imgAuthor={imgAuthor} author={author} date={date}/>}
       </SC.ContentCon>
     </SC.PostCon>
   );

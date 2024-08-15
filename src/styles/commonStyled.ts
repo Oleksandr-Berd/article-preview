@@ -1,85 +1,93 @@
 import styled from "styled-components";
 
 export const SharedLayoutStyled = styled.div`
-max-width: 1280px;
-
-`
+  max-width: 1280px;
+`;
 
 export const PostCon = styled.div`
-
-padding-bottom: 20px;
-`
+  padding-bottom: 20px;
+`;
 
 export const ImgPostCon = styled.div`
-height: 200px;
+  height: 200px;
 
-margin-bottom: 36px;
+  margin-bottom: 36px;
 
-& >img{
+  & > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-}
-`
+  }
+`;
 
 export const ContentCon = styled.div`
+  & > div:first-child {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-padding-left: 32px;
-padding-right: 32px;
-
-& h3, & h4 {
+  & h3,
+  & h4 {
     font-family: "ManRopeBold";
-    color: ${({theme}) => theme.color.title}
-    
-}
+    color: ${({ theme }) => theme.color.title};
+  }
 
-& p{
+  & p {
+    color: ${({ theme }) => theme.color.text};
 
-color: ${({theme})=> theme.color.text};
+    font-family: "ManRopeMed";
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.12px;
+  }
 
-font-family: "ManRopeMed";
-font-size: 13px;
-line-height: 1.5;
-letter-spacing: 0.12px;
-}
-
-& > div:first-child{
+  & > div:first-child {
     margin-bottom: 32px;
-}
-`
+  }
+`;
 
 export const PostTitle = styled.h3`
-margin-bottom: 12px;
+  margin-bottom: 12px;
 
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.2px;
-`
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+`;
 
 export const AuthorCon = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-& > div{
+  & > div {
     display: flex;
-justify-content: space-between;
-}
-`
+    justify-content: space-between;
+  }
+`;
 
 export const AuthorImg = styled.div`
-display: inline-block;
-margin-right: 16px;
-`
+  display: inline-block;
+  margin-right: 16px;
+`;
 
 export const AuthorTitle = styled.h4`
-font-size: 13px;
-line-height: 1.5;
-letter-spacing: 0.12px;
-`
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+`;
 
 export const Button = styled.button`
-border: none;
-background-color: transparent;
-`
+  border: none;
+  background-color: transparent;
+`;
 
+export const ShareCommonCon = styled.div`
+display: flex;
+flex-direction: row;
+
+  background-color: ${({ theme }) => theme.color.title};
+`;
+
+
+export const ShareTitle = styled.h5`
+color: ${({theme})=> theme.color.layout}
+`
