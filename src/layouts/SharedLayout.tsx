@@ -1,10 +1,12 @@
+import * as SC from "../styles/commonStyled"
+
 import PostList from "../components/Post/PostList";
 
 const SharedLayout: React.FC = () => {
   return (
-    <div>
+    <SC.SharedLayoutStyled>
       <PostList />
-    </div>
+    </SC.SharedLayoutStyled>
   );
 };
 

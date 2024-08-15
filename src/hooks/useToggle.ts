@@ -5,7 +5,7 @@ export const useToggle = () => {
 
     const openShare = ():void => setIsShare(true)
     const closeShare = ():void => setIsShare(false)
-    const toggleShare = ():void => setIsShare(isShare)
+    const toggleShare = ():void => setIsShare(!isShare)
 
     return {openShare, closeShare, isShare, toggleShare}
 }

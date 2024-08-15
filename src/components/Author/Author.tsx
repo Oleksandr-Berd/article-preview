@@ -6,7 +6,7 @@ import ButtonCon from "../Button/Button";
 type Props = Partial<IPost> & Partial<IButton>;
 
 const AuthorComp: React.FC<Props> = (props) => {
-  const { imgAuthor, author, date, openShare } = props;
+  const { imgAuthor, author, date, openShare, isShare } = props;
 
   return (
     <SC.AuthorCon>
@@ -19,7 +19,7 @@ const AuthorComp: React.FC<Props> = (props) => {
           <p>{date}</p>
         </div>
       </div>
-      <ButtonCon handleComp={openShare ?? defaultFunc} />
+      <ButtonCon handleComp={openShare ?? defaultFunc} isShare={isShare}/>
     </SC.AuthorCon>
   );
 };
