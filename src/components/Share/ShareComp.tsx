@@ -14,7 +14,7 @@ const ShareComp: React.FC<Partial <IButton>> = ({closeShare}) => {
     <SC.ShareCommonCon>
       
         <SC.ShareTitle>share</SC.ShareTitle>
-        <ul>
+        <SC.IconsList>
           <li>
             <a href="https://www.facebook.com/sasha.berdichevsky" target="_blank" rel="noreferrer">
               <img src={fbIcon} alt="fb link" />
@@ -30,7 +30,7 @@ const ShareComp: React.FC<Partial <IButton>> = ({closeShare}) => {
               <img src={pinterestIcon} alt="pinterest link" />
             </a>
           </li>
-        </ul>
+        </SC.IconsList>
       <ButtonCon handleComp={closeShare ?? defaultFunc}/>
     </SC.ShareCommonCon>
   );

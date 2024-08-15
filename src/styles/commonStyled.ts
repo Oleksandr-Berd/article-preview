@@ -91,3 +91,8 @@ flex-direction: row;
 export const ShareTitle = styled.h5`
 color: ${({theme})=> theme.color.layout}
 `
+
+export const IconsList = styled.ul`
+display: flex;
+flex-direction: row;
+`
